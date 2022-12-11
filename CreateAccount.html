@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!-- css File -->
+    <link rel="stylesheet" href="css/Style.css" />
+
+    <title>Valinteca</title>
+  </head>
+  <body>
+    <div class="CreateAccount">
+    <img class="bg" src="images/Background.png" />
+    <div class="CreateAccount-Content">
+        <div class="ImageHolder">
+            <img src="images/Image Placeholder1.png"/>
+        </div>
+        <div class="CreateAccount-Info">
+            <h1>Create Account</h1>
+            <p>Go ahead and sign up, let everyone know how awesome you are!</p>
+                <!-- Start Input Fields -->
+                <form id="form" action="/" method="GET">
+                    <!--Start UserName -->
+                <div class="CreateAccount-Data">
+                    <div class="UserParent">
+                        <div class="usererror"></div>
+                        <i class="fa-solid fa-triangle-exclamation usererrorIcon"></i>
+                    </div>
+                    <i class="fa-regular fa-user Secondary"></i>
+                    <span class="border"></span>
+                    <input id="userName" type="text" placeholder="UserName" required/>
+                </div>
+                <!-- End UserName -->
+                <!--Start Email -->
+                <div class="CreateAccount-Data">
+                    <div class="error"></div>
+                    <i class="fa-regular fa-user Secondary"></i>
+                    <span class="border"></span>
+                    <input type="email" placeholder="Email" required/>
+                </div>
+                <!-- End Email -->
+                <!--Start Password  -->
+                <div class="CreateAccount-Data">
+                    <div class="PasswordParent">
+                    <div class="passworderror"></div>
+                        <i class="fa-solid fa-triangle-exclamation passworderrorIcon"></i>
+                    </div>
+                    <i class="fa-regular fa-user Secondary"></i>
+                    <span class="border"></span>
+                    <input id="password" type="password" placeholder="Password" required/>
+                </div>
+                <!-- End Password -->
+                <!-- Start Re-Enter Password -->
+                <div class="CreateAccount-Data">
+                    <i class="fa-regular fa-user Secondary"></i>
+                    <span class="border"></span>
+                    <input type="password" placeholder="Confirm password" required/>
+                </div>
+                <!-- End Re-Enter Password -->
+            <button type="submit" id="submit">Get Started</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

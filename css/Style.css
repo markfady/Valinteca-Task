@@ -28,16 +28,18 @@ body{
     }
 }
     /* End Global Rules */
-
+    /* Start Image on Left */
 .bg {
     position: fixed; 
     top: 0; 
     left: 0; 
     min-width: 100%;
     min-height: 100%;
-
 }
-.WelcomePage-Content{
+    /* End Image on Left */
+    /* Start Welcome Page,CreateAccount Page */
+.WelcomePage-Content , .CreateAccount-Content{
+    position: absolute;
     background-color: white;
     border-radius: 10px;
     margin: 300px;
@@ -46,13 +48,13 @@ body{
     justify-content:space-evenly;
     opacity: 99%;
 }
-.WelcomePage-Info h1{
+.WelcomePage-Info h1 , .CreateAccount-Info h1{
     color: #2D2D2D;
     font-size: 56px;
     margin-bottom: 30px;
 }
-.WelcomePage-Info p{
-    margin-bottom: 30px;
+.WelcomePage-Info p , .CreateAccount-Info p{
+    margin-bottom: 15px;
     font-family: Mulish;
     font-size: 24px;
     font-weight: 400;
@@ -60,7 +62,7 @@ body{
     text-align: left;
     color: #1F1249;
 }
-.WelcomePage-Info button{
+.WelcomePage-Info button , .CreateAccount-Info button{
     font-family: Mulish;
     font-size: 16px;
     font-weight: 700;
@@ -73,5 +75,54 @@ body{
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
-    
 }
+/* start Input Fields Create-Account */
+.CreateAccount-Data{
+    margin-bottom: 20px;
+}
+.CreateAccount-Data i{
+    position: absolute;
+    transform: translate(11px, 15px);
+    height: 18px;
+    color:#9CADF2;
+    ;
+}
+/* Select The icon with specific class name "Secondary" */
+i.Secondary::after{
+    border-right: 1px solid cyan;
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 21px;
+}
+.CreateAccount-Data input{
+    width: 500px;
+    height: 50px;
+    padding:0px 15px 0px 40px;
+    border: 1px solid  #DBE3FF;
+    border-radius: 10px;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    outline: none;
+}
+.UserParent , .PasswordParent{
+    display: none;
+}
+/* Alert Text */
+.usererror , .passworderror{ 
+    margin-bottom:15px;
+    font-weight: bold;
+    color: RED;
+}
+/* Alert Icon */
+.UserParent i , .PasswordParent i{
+    position: relative;
+}
+.usererrorIcon , .passworderrorIcon{
+    visibility: hidden;
+    transform: translate(24px, 0px) !important;
+    color: red !important;
+}
+/* End Input Fields Create-Account */
