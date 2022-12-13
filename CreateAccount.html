@@ -22,7 +22,7 @@
             <h1>Create Account</h1>
             <p>Go ahead and sign up, let everyone know how awesome you are!</p>
                 <!-- Start Input Fields -->
-                <form id="form" action="/" method="GET">
+                <form id="form" action="successfully.html" method="GET">
                     <!--Start UserName -->
                 <div class="CreateAccount-Data">
                     <div class="UserParent">
@@ -39,7 +39,7 @@
                     <div class="error"></div>
                     <i class="fa-regular fa-user Secondary"></i>
                     <span class="border"></span>
-                    <input type="email" placeholder="Email" required/>
+                    <input id="email" type="email" placeholder="Email" required/>
                 </div>
                 <!-- End Email -->
                 <!--Start Password  -->
@@ -55,9 +55,13 @@
                 <!-- End Password -->
                 <!-- Start Re-Enter Password -->
                 <div class="CreateAccount-Data">
+                    <div class="ConfirmParent">
+                        <div class="confirmerror"></div>
+                            <i class="fa-solid fa-triangle-exclamation confirmerrorIcon"></i>
+                        </div>
                     <i class="fa-regular fa-user Secondary"></i>
                     <span class="border"></span>
-                    <input type="password" placeholder="Confirm password" required/>
+                    <input id="confirmPassword" type="password" placeholder="Confirm password" required/>
                 </div>
                 <!-- End Re-Enter Password -->
             <button type="submit" id="submit">Get Started</button>

@@ -39,14 +39,17 @@ body{
     /* End Image on Left */
     /* Start Welcome Page,CreateAccount Page */
 .WelcomePage-Content , .CreateAccount-Content{
-    position: absolute;
+    width: 56%;
+    margin: 300px auto;
     background-color: white;
     border-radius: 10px;
-    margin: 300px;
     padding: 60px;
     display: flex;
     justify-content:space-evenly;
     opacity: 99%;
+}
+#MobileText{
+    display: none;
 }
 .WelcomePage-Info h1 , .CreateAccount-Info h1{
     color: #2D2D2D;
@@ -71,7 +74,7 @@ body{
     color: white;
     background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
     border: none;
-    width: 100%;
+    width: 93%;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
@@ -97,6 +100,7 @@ i.Secondary::after{
 }
 .CreateAccount-Data input{
     width: 500px;
+    max-width: 450px;
     height: 50px;
     padding:0px 15px 0px 40px;
     border: 1px solid  #DBE3FF;
@@ -107,22 +111,68 @@ i.Secondary::after{
     line-height: 22px;
     outline: none;
 }
-.UserParent , .PasswordParent{
+.UserParent , .PasswordParent , .ConfirmParent{
     display: none;
 }
 /* Alert Text */
-.usererror , .passworderror{ 
+.usererror , .passworderror , .confirmerror{ 
     margin-bottom:15px;
     font-weight: bold;
     color: RED;
 }
 /* Alert Icon */
-.UserParent i , .PasswordParent i{
+.UserParent i , .PasswordParent i , .ConfirmParent i{
     position: relative;
 }
-.usererrorIcon , .passworderrorIcon{
+.usererrorIcon , .passworderrorIcon , .confirmerrorIcon{
     visibility: hidden;
     transform: translate(24px, 0px) !important;
     color: red !important;
 }
 /* End Input Fields Create-Account */
+
+
+
+/* Mobile View */
+@media (min-width:110px) and (max-width:1412px) {
+    .bg{
+    visibility: hidden;
+    }
+    .ImageHolder img{
+        max-width: 243px;
+        height: 289px;
+        padding-right: 6px;
+    }
+    #NormalText{
+        display: none;
+    }
+    #MobileText{
+        display: block;
+    }
+    .WelcomePage-Content, .CreateAccount-Content{
+    border-radius: 10px;
+    width: 95%!important;
+    margin: auto;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    opacity: 99%;
+    }
+    .WelcomePage-Info{
+        width: 274px;
+    }
+    .WelcomePage-Info h1{
+        text-align: center;
+    }
+    .WelcomePage-Info p{
+        font-size: 16px;
+        word-break: break-word;
+        color: #1F1249;
+        text-align: center;
+    }
+    .WelcomePage-Info button{
+        padding: 18px;
+        margin-left: 6px;
+    }
+}
