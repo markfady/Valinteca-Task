@@ -175,4 +175,7 @@ i.Secondary::after{
         padding: 18px;
         margin-left: 6px;
     }
+    #smallerFont{
+        font-size: 32px;
+    }
 }
